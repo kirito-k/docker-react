@@ -6,7 +6,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-EXPOSE 90
+EXPOSE 80
 COPY --from=preinstall /app/build /usr/share/nginx/html
 
 
